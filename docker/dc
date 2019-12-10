@@ -1,0 +1,27 @@
+#!/bin/bash
+declare -r projectArr
+projectArr=("a" "b")
+
+function menu {
+  echo
+  echo -e "\t\t\t\t项目控制脚本\n"
+  echo -e "\t\t使用方法: ./dc start 启动服务\n"
+  echo -e "\t1. install: 安装服务\n"
+  echo -e "\t2. start: 启动服务\n"
+  echo -e "\t3. stop: 关闭服务\n"
+  echo -e "\t4. clear: 清除环境，可以清除容器后重新启动\n"
+}
+
+case $1 in
+'install')
+  installBasement
+  ;;
+'start')
+  ;;
+'stop')
+  ;;
+'clear')
+  ;;
+*)
+  menu
+esac
